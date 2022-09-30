@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.core.generated="false" org.eventb.texttools.text_lastmodified="1664540665063" org.eventb.texttools.text_representation="&#10;machine ascenseur&#10;sees contextEtage&#10;&#10;variables&#10;&#9;etageCourrant&#10;invariants&#10;&#9;@etageInv etageCourrant ∈ etages&#10;&#10;events&#10;  event INITIALISATION&#10;  &#9;then @initCourrant etageCourrant ≔ 0&#10;  end&#10;  event deplacer&#10;  &#9;then @b etageCourrant :∈  etages∖{etageCourrant}&#10;  end&#10;end&#10;" version="5">
+    <org.eventb.core.seesContext name="_ufOYMEC5Ee2TBfZ46CqWRA" org.eventb.core.target="contextEtage"/>
+    <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="INITIALISATION">
+        <org.eventb.core.action name="_ufOYMUC5Ee2TBfZ46CqWRA" org.eventb.core.assignment="etageCourrant ≔ 0" org.eventb.core.generated="false" org.eventb.core.label="initCourrant"/>
+    </org.eventb.core.event>
+    <org.eventb.core.variable name="_i2aM4EC3Ee2TBfZ46CqWRA" org.eventb.core.generated="false" org.eventb.core.identifier="etageCourrant"/>
+    <org.eventb.core.invariant name="_ufO_QUC5Ee2TBfZ46CqWRA" org.eventb.core.generated="false" org.eventb.core.label="etageInv" org.eventb.core.predicate="etageCourrant ∈ etages"/>
+    <org.eventb.core.event name="_ufO_Q0C5Ee2TBfZ46CqWRA" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="deplacer">
+        <org.eventb.core.action name="_ufO_RUC5Ee2TBfZ46CqWRA" org.eventb.core.assignment="etageCourrant :∈  etages∖{etageCourrant}" org.eventb.core.generated="false" org.eventb.core.label="b"/>
+    </org.eventb.core.event>
+</org.eventb.core.machineFile>

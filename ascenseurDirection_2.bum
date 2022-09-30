@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.core.generated="false" org.eventb.texttools.text_lastmodified="1664544813361" org.eventb.texttools.text_representation="machine ascenseurDirection_2 refines ascenseurDemande_1  sees contextEtage&#10;&#10;variables etageCourrant listeDemande directionCurr&#10;&#10;invariants&#10;&#9;@invDirCurr directionCurr ∈ Direction&#10;&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;  &#9;then&#10;  &#9;&#9;@initDirCurr directionCurr ≔ immobile&#10;  end&#10;&#10;  event deplacer extends deplacer&#10;&#10;  end&#10;&#9;//Ajouter variable avec :|, rajouter etage voulu, transformer deplacer en selection de l'étage voulu&#10;  event monter&#10;  &#9;any dest where&#10;  &#9;&#9;@x dest &gt; etageCourrant&#10;  &#9;then&#10;  &#9;&#9;@y directionCurr ≔  monte&#10;  end&#10;  event descendre&#10;  &#9;any dest where&#10;  &#9;&#9;@x dest &lt; etageCourrant&#10;  &#9;then&#10;  &#9;&#9;@y directionCurr ≔  descend&#10;  end&#10;  event pasBouger&#10;  &#9;any dest where&#10;  &#9;&#9;@x dest = etageCourrant&#10;  &#9;then&#10;  &#9;&#9;@y directionCurr ≔  immobile&#10;  end&#10;end&#10;" version="5">
+    <org.eventb.core.refinesMachine name="'" org.eventb.core.target="ascenseurDemande_1"/>
+    <org.eventb.core.seesContext name="_ufOYMEC5Ee2TBfZ46CqWRA" org.eventb.core.target="contextEtage"/>
+    <org.eventb.core.variable name="_i2aM4EC3Ee2TBfZ46CqWRA" org.eventb.core.generated="false" org.eventb.core.identifier="etageCourrant"/>
+    <org.eventb.core.variable name="_boKgsEC7Ee2TBfZ46CqWRA" org.eventb.core.generated="false" org.eventb.core.identifier="listeDemande"/>
+    <org.eventb.core.event name="_ufOYMEC5Ee2TBfZ46CqWRB" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="INITIALISATION">
+        <org.eventb.core.action name="_VG49UEDBEe2TBfZ46CqWRA" org.eventb.core.assignment="directionCurr ≔ immobile" org.eventb.core.generated="false" org.eventb.core.label="initDirCurr"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_ufOYMEC5Ee2TBfZ46CqWRC" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="deplacer">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="deplacer"/>
+    </org.eventb.core.event>
+    <org.eventb.core.variable name="_EnGxIEDBEe2TBfZ46CqWRA" org.eventb.core.generated="false" org.eventb.core.identifier="directionCurr"/>
+    <org.eventb.core.invariant name="_cpnH4EDBEe2TBfZ46CqWRA" org.eventb.core.generated="false" org.eventb.core.label="invDirCurr" org.eventb.core.predicate="directionCurr ∈ Direction"/>
+    <org.eventb.core.event name="_-drfUEDBEe2TBfZ46CqWRA" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="monter">
+        <org.eventb.core.parameter name="_-drfUUDBEe2TBfZ46CqWRA" org.eventb.core.generated="false" org.eventb.core.identifier="dest"/>
+        <org.eventb.core.guard name="_-drfUkDBEe2TBfZ46CqWRA" org.eventb.core.generated="false" org.eventb.core.label="x" org.eventb.core.predicate="dest &gt; etageCourrant"/>
+        <org.eventb.core.action name="_EJa6IEDCEe2TBfZ46CqWRA" org.eventb.core.assignment="directionCurr ≔  monte" org.eventb.core.generated="false" org.eventb.core.label="y"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_LGKCwEDCEe2TBfZ46CqWRA" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="descendre">
+        <org.eventb.core.parameter name="_KN1ToUDCEe2TBfZ46CqWRA" org.eventb.core.generated="false" org.eventb.core.identifier="dest"/>
+        <org.eventb.core.guard name="_KN1TokDCEe2TBfZ46CqWRA" org.eventb.core.generated="false" org.eventb.core.label="x" org.eventb.core.predicate="dest &lt; etageCourrant"/>
+        <org.eventb.core.action name="_KN1To0DCEe2TBfZ46CqWRA" org.eventb.core.assignment="directionCurr ≔  descend" org.eventb.core.generated="false" org.eventb.core.label="y"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_YZjygEDCEe2TBfZ46CqWRA" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="pasBouger">
+        <org.eventb.core.parameter name="_Nz40UUDCEe2TBfZ46CqWRA" org.eventb.core.generated="false" org.eventb.core.identifier="dest"/>
+        <org.eventb.core.guard name="_Nz40UkDCEe2TBfZ46CqWRA" org.eventb.core.generated="false" org.eventb.core.label="x" org.eventb.core.predicate="dest = etageCourrant"/>
+        <org.eventb.core.action name="_Nz40U0DCEe2TBfZ46CqWRA" org.eventb.core.assignment="directionCurr ≔  immobile" org.eventb.core.generated="false" org.eventb.core.label="y"/>
+    </org.eventb.core.event>
+</org.eventb.core.machineFile>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.prFile version="1">
+    <org.eventb.core.prProof name="INITIALISATION/invListeDemande/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="etages" org.eventb.core.type="ℙ(ℤ)"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(ℤ))⊆etages"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="deplacer/invListeDemande/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p7"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p3,p2,p4,p6,p7">
+                    <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="E" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.prIdent name="etage" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.prIdent name="etageCourrant" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.prIdent name="etages" org.eventb.core.type="ℙ(ℤ)"/>
+        <org.eventb.core.prIdent name="listeDemande" org.eventb.core.type="ℙ(ℤ)"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="E∈ℕ1"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="etageCourrant∈etages"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="etages=0 ‥ E"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="listeDemande⊆etages"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬listeDemande⊆{etageCourrant}"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="listeDemande ∖ {etageCourrant}≠(∅ ⦂ ℙ(ℤ))"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="listeDemande ∖ {etage}⊆etages"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="etage∈listeDemande ∖ {etageCourrant}"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="deplacer/deplaceAsc/FIS" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p7">
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p7" org.eventb.core.prHyps="p1,p5,p3,p6,p2,p4">
+                    <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="E" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.prIdent name="e" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.prIdent name="etageCourrant" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.prIdent name="etageCourrant'" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.prIdent name="etages" org.eventb.core.type="ℙ(ℤ)"/>
+        <org.eventb.core.prIdent name="listeDemande" org.eventb.core.type="ℙ(ℤ)"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="E∈ℕ1"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="e∈listeDemande"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="etageCourrant∈etages"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="listeDemande≠(∅ ⦂ ℙ(ℤ))"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="etageCourrant'∈etages ∖ {etageCourrant}"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="etages=0 ‥ E"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="listeDemande⊆etages"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬listeDemande=(∅ ⦂ ℙ(ℤ))"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="deplacer/b/SIM" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p7"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p3,p2,p4,p6,p7">
+                    <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="E" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.prIdent name="etage" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.prIdent name="etageCourrant" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.prIdent name="etages" org.eventb.core.type="ℙ(ℤ)"/>
+        <org.eventb.core.prIdent name="listeDemande" org.eventb.core.type="ℙ(ℤ)"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="E∈ℕ1"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="etageCourrant∈etages"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="etage∈etages ∖ {etageCourrant}"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="etages=0 ‥ E"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="listeDemande⊆etages"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬listeDemande⊆{etageCourrant}"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="listeDemande ∖ {etageCourrant}≠(∅ ⦂ ℙ(ℤ))"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="etage∈listeDemande ∖ {etageCourrant}"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+    </org.eventb.core.prProof>
+</org.eventb.core.prFile>

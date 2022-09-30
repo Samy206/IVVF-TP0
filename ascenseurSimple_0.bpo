@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="5">
+    <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="5">
+        <org.eventb.core.poIdentifier name="Direction" org.eventb.core.type="ℙ(Direction)"/>
+        <org.eventb.core.poIdentifier name="E" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="descend" org.eventb.core.type="Direction"/>
+        <org.eventb.core.poIdentifier name="immobile" org.eventb.core.type="Direction"/>
+        <org.eventb.core.poIdentifier name="monte" org.eventb.core.type="Direction"/>
+        <org.eventb.core.poIdentifier name="etages" org.eventb.core.type="ℙ(ℤ)"/>
+        <org.eventb.core.poPredicate name="Directioo" org.eventb.core.predicate="E∈ℕ1" org.eventb.core.source="/TP0/contextEtage.buc|org.eventb.core.contextFile#contextEtage|org.eventb.core.axiom#_W9LVEEC3Ee2TBfZ46CqWRA"/>
+        <org.eventb.core.poPredicate name="Directiop" org.eventb.core.predicate="etages=0 ‥ E" org.eventb.core.source="/TP0/contextEtage.buc|org.eventb.core.contextFile#contextEtage|org.eventb.core.axiom#_zES7UUC4Ee2TBfZ46CqWRA"/>
+        <org.eventb.core.poPredicate name="Directioq" org.eventb.core.predicate="partition(Direction,{monte},{descend},{immobile})" org.eventb.core.source="/TP0/contextEtage.buc|org.eventb.core.contextFile#contextEtage|org.eventb.core.axiom#_13rIQUDAEe2TBfZ46CqWRA"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/TP0/ascenseurSimple_0.bpo|org.eventb.core.poFile#ascenseurSimple_0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="5">
+        <org.eventb.core.poIdentifier name="etageCourrant" org.eventb.core.type="ℤ"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="INITIALISATION/etageInv/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="5">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TP0/ascenseurSimple_0.bpo|org.eventb.core.poFile#ascenseurSimple_0|org.eventb.core.poPredicateSet#EVTALLHYPetageCourranu"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈etages" org.eventb.core.source="/TP0/ascenseurSimple_0.bum|org.eventb.core.machineFile#ascenseurSimple_0|org.eventb.core.invariant#_ufO_QUC5Ee2TBfZ46CqWRA"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TP0/ascenseurSimple_0.bum|org.eventb.core.machineFile#ascenseurSimple_0|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TP0/ascenseurSimple_0.bum|org.eventb.core.machineFile#ascenseurSimple_0|org.eventb.core.invariant#_ufO_QUC5Ee2TBfZ46CqWRA"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/TP0/ascenseurSimple_0.bpo|org.eventb.core.poFile#ascenseurSimple_0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/TP0/ascenseurSimple_0.bpo|org.eventb.core.poFile#ascenseurSimple_0|org.eventb.core.poSequent#INITIALISATION\/etageInv\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TP0/ascenseurSimple_0.bpo|org.eventb.core.poFile#ascenseurSimple_0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTetageCourranu" org.eventb.core.parentSet="/TP0/ascenseurSimple_0.bpo|org.eventb.core.poFile#ascenseurSimple_0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="5">
+        <org.eventb.core.poIdentifier name="etageCourrant'" org.eventb.core.type="ℤ"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPetageCourranu" org.eventb.core.parentSet="/TP0/ascenseurSimple_0.bpo|org.eventb.core.poFile#ascenseurSimple_0|org.eventb.core.poPredicateSet#EVTIDENTetageCourranu" org.eventb.core.poStamp="5"/>
+    <org.eventb.core.poSequent name="deplacer/etageInv/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="5">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TP0/ascenseurSimple_0.bpo|org.eventb.core.poFile#ascenseurSimple_0|org.eventb.core.poPredicateSet#EVTALLHYPetageCourranv">
+            <org.eventb.core.poPredicate name="'" org.eventb.core.predicate="etageCourrant'∈etages ∖ {etageCourrant}" org.eventb.core.source="/TP0/ascenseurSimple_0.bum|org.eventb.core.machineFile#ascenseurSimple_0|org.eventb.core.event#_ufO_Q0C5Ee2TBfZ46CqWRA|org.eventb.core.action#_ufO_RUC5Ee2TBfZ46CqWRA"/>
+        </org.eventb.core.poPredicateSet>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="etageCourrant'∈etages" org.eventb.core.source="/TP0/ascenseurSimple_0.bum|org.eventb.core.machineFile#ascenseurSimple_0|org.eventb.core.invariant#_ufO_QUC5Ee2TBfZ46CqWRA"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TP0/ascenseurSimple_0.bum|org.eventb.core.machineFile#ascenseurSimple_0|org.eventb.core.event#_ufO_Q0C5Ee2TBfZ46CqWRA"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TP0/ascenseurSimple_0.bum|org.eventb.core.machineFile#ascenseurSimple_0|org.eventb.core.invariant#_ufO_QUC5Ee2TBfZ46CqWRA"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/TP0/ascenseurSimple_0.bpo|org.eventb.core.poFile#ascenseurSimple_0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TP0/ascenseurSimple_0.bpo|org.eventb.core.poFile#ascenseurSimple_0|org.eventb.core.poSequent#deplacer\/etageInv\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TP0/ascenseurSimple_0.bpo|org.eventb.core.poFile#ascenseurSimple_0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="deplacer/b/FIS" org.eventb.core.accurate="true" org.eventb.core.poDesc="Feasibility of action" org.eventb.core.poStamp="5">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TP0/ascenseurSimple_0.bpo|org.eventb.core.poFile#ascenseurSimple_0|org.eventb.core.poPredicateSet#EVTALLHYPetageCourranv"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="etages ∖ {etageCourrant}≠(∅ ⦂ ℙ(ℤ))" org.eventb.core.source="/TP0/ascenseurSimple_0.bum|org.eventb.core.machineFile#ascenseurSimple_0|org.eventb.core.event#_ufO_Q0C5Ee2TBfZ46CqWRA|org.eventb.core.action#_ufO_RUC5Ee2TBfZ46CqWRA"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TP0/ascenseurSimple_0.bum|org.eventb.core.machineFile#ascenseurSimple_0|org.eventb.core.event#_ufO_Q0C5Ee2TBfZ46CqWRA|org.eventb.core.action#_ufO_RUC5Ee2TBfZ46CqWRA"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/TP0/ascenseurSimple_0.bpo|org.eventb.core.poFile#ascenseurSimple_0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TP0/ascenseurSimple_0.bpo|org.eventb.core.poFile#ascenseurSimple_0|org.eventb.core.poPredicateSet#EVTALLHYPetageCourranv"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTetageCourranv" org.eventb.core.parentSet="/TP0/ascenseurSimple_0.bpo|org.eventb.core.poFile#ascenseurSimple_0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="5">
+        <org.eventb.core.poIdentifier name="etageCourrant'" org.eventb.core.type="ℤ"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPetageCourranv" org.eventb.core.parentSet="/TP0/ascenseurSimple_0.bpo|org.eventb.core.poFile#ascenseurSimple_0|org.eventb.core.poPredicateSet#EVTIDENTetageCourranv" org.eventb.core.poStamp="5"/>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/TP0/ascenseurSimple_0.bpo|org.eventb.core.poFile#ascenseurSimple_0|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="5">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="etageCourrant∈etages" org.eventb.core.source="/TP0/ascenseurSimple_0.bum|org.eventb.core.machineFile#ascenseurSimple_0|org.eventb.core.invariant#_ufO_QUC5Ee2TBfZ46CqWRA"/>
+    </org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

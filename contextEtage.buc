@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.core.generated="false" org.eventb.texttools.text_lastmodified="1664543889784" org.eventb.texttools.text_representation="context contextEtage&#10;&#10;sets Direction&#10;&#10;constants E etages monte descend immobile&#10;&#10;axioms&#10;  @E_positif E ∈ ℕ1&#10;  @etageDef etages = 0‥E&#10;  @directionDef partition(Direction, {monte}, {descend}, {immobile})  // direction monte descend ou ne bouge pas avec immobile&#10;end&#10;" version="3">
+    <org.eventb.core.constant name="_GsYnIEC3Ee2TBfZ46CqWRA" org.eventb.core.generated="false" org.eventb.core.identifier="E"/>
+    <org.eventb.core.axiom name="_W9LVEEC3Ee2TBfZ46CqWRA" org.eventb.core.generated="false" org.eventb.core.label="E_positif" org.eventb.core.predicate="E ∈ ℕ1"/>
+    <org.eventb.core.constant name="_zES7UEC4Ee2TBfZ46CqWRA" org.eventb.core.generated="false" org.eventb.core.identifier="etages"/>
+    <org.eventb.core.axiom name="_zES7UUC4Ee2TBfZ46CqWRA" org.eventb.core.generated="false" org.eventb.core.label="etageDef" org.eventb.core.predicate="etages = 0‥E"/>
+    <org.eventb.core.carrierSet name="_13rIQEDAEe2TBfZ46CqWRA" org.eventb.core.generated="false" org.eventb.core.identifier="Direction"/>
+    <org.eventb.core.axiom name="_13rIQUDAEe2TBfZ46CqWRA" org.eventb.core.comment="direction monte descend ou ne bouge pas avec immobile" org.eventb.core.generated="false" org.eventb.core.label="directionDef" org.eventb.core.predicate="partition(Direction, {monte}, {descend}, {immobile})"/>
+    <org.eventb.core.constant name="_6BQMwEDAEe2TBfZ46CqWRA" org.eventb.core.generated="false" org.eventb.core.identifier="monte"/>
+    <org.eventb.core.constant name="_6BQMwUDAEe2TBfZ46CqWRA" org.eventb.core.generated="false" org.eventb.core.identifier="descend"/>
+    <org.eventb.core.constant name="_VCV_EEDCEe2TBfZ46CqWRA" org.eventb.core.generated="false" org.eventb.core.identifier="immobile"/>
+</org.eventb.core.contextFile>

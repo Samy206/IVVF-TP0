@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.core.generated="false" org.eventb.texttools.text_lastmodified="1664543096758" org.eventb.texttools.text_representation="machine ascenseurDemande_1 refines ascenseurSimple_0  sees contextEtage&#10;&#10;variables etageCourrant listeDemande&#10;&#10;invariants&#10;&#9;@invListeDemande listeDemande ⊆ etages&#10;&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;  &#9;&#9;@initDemande listeDemande ≔ ∅&#10;  end&#10;&#10;  event deplacer refines deplacer&#10; &#9;any etage where&#10; &#9;&#9;// On ne peut pas se déplacer à l'étage courrant&#10;  &#9;&#9;@recupEtage etage ∈ listeDemande∖{etageCourrant}&#10;  &#9;&#9;@condDemande listeDemande∖{etageCourrant} ≠  ∅&#10;&#9;then&#10;&#9;&#9;@deplaceAsc etageCourrant ≔  etage&#10;&#9;&#9;@popDemande listeDemande ≔ listeDemande∖{etage}&#10;  end&#10;end&#10;" version="5">
+    <org.eventb.core.refinesMachine name="'" org.eventb.core.target="ascenseurSimple_0"/>
+    <org.eventb.core.seesContext name="_ufOYMEC5Ee2TBfZ46CqWRA" org.eventb.core.target="contextEtage"/>
+    <org.eventb.core.variable name="_i2aM4EC3Ee2TBfZ46CqWRA" org.eventb.core.generated="false" org.eventb.core.identifier="etageCourrant"/>
+    <org.eventb.core.event name="_ufOYMEC5Ee2TBfZ46CqWRB" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="INITIALISATION">
+        <org.eventb.core.action name="_kSdXUEC7Ee2TBfZ46CqWRA" org.eventb.core.assignment="listeDemande ≔ ∅" org.eventb.core.generated="false" org.eventb.core.label="initDemande"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_ufOYMEC5Ee2TBfZ46CqWRC" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="deplacer">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="deplacer"/>
+        <org.eventb.core.action name="_1e08sEC7Ee2TBfZ46CqWRA" org.eventb.core.assignment="etageCourrant ≔  etage" org.eventb.core.generated="false" org.eventb.core.label="deplaceAsc"/>
+        <org.eventb.core.action name="_kGPq0EC8Ee2TBfZ46CqWRA" org.eventb.core.assignment="listeDemande ≔ listeDemande∖{etage}" org.eventb.core.generated="false" org.eventb.core.label="popDemande"/>
+        <org.eventb.core.parameter name="_CWh9AEC-Ee2TBfZ46CqWRA" org.eventb.core.generated="false" org.eventb.core.identifier="etage"/>
+        <org.eventb.core.guard name="_CWh9AUC-Ee2TBfZ46CqWRA" org.eventb.core.generated="false" org.eventb.core.label="recupEtage" org.eventb.core.predicate="etage ∈ listeDemande∖{etageCourrant}"/>
+        <org.eventb.core.guard name="_CWh9AkC-Ee2TBfZ46CqWRA" org.eventb.core.generated="false" org.eventb.core.label="condDemande" org.eventb.core.predicate="listeDemande∖{etageCourrant} ≠  ∅"/>
+    </org.eventb.core.event>
+    <org.eventb.core.variable name="_boKgsEC7Ee2TBfZ46CqWRA" org.eventb.core.generated="false" org.eventb.core.identifier="listeDemande"/>
+    <org.eventb.core.invariant name="_boKgsUC7Ee2TBfZ46CqWRA" org.eventb.core.generated="false" org.eventb.core.label="invListeDemande" org.eventb.core.predicate="listeDemande ⊆ etages"/>
+</org.eventb.core.machineFile>
